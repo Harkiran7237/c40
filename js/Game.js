@@ -66,8 +66,8 @@ class Game {
         x = x + 200;
         //use data form the database to display the cars in y direction
         y = displayHeight - allPlayers[plr].distance;
-        cars[index-1].x = x;
-        cars[index-1].y = y;
+        cars[index-1].position.x = x;
+        cars[index-1].position.y = y;
        // console.log(index, player.index)
 
        
@@ -77,7 +77,7 @@ class Game {
           ellipse(x,y,60,60);
           cars[index - 1].shapeColor = "red";
           camera.position.x = displayWidth/2;
-          camera.position.y = cars[index-1].y;
+          camera.position.y = cars[index-1].position.y;
         }
        
         //textSize(15);
